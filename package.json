@@ -1,5 +1,5 @@
 {
-	"name": "common.firebase-cloud-messaging",
+	"name": "@arunvaradharajalu/common.firebase-cloud-messaging",
 	"version": "1.0.0",
 	"description": "This package contains wrapper for firebase cloud messaging",
 	"main": "./build/index.js",
