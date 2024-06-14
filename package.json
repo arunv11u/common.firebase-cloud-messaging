@@ -1,0 +1,56 @@
+{
+	"name": "common.firebase-cloud-messaging",
+	"version": "1.0.0",
+	"description": "This package contains wrapper for firebase cloud messaging",
+	"main": "./build/index.js",
+	"types": "./build/index.d.ts",
+	"files": [
+		"build/**/*"
+	],
+	"scripts": {
+		"clean": "rimraf build",
+		"build": "npm run clean && tsc --project tsconfig.build.json",
+		"test": "jest --watchAll --verbose --no-cache --detectOpenHandles --env=node --coverage"
+	},
+	"jest": {
+		"preset": "ts-jest",
+		"testEnvironment": "node",
+		"roots": [
+			"<rootDir>/test"
+		],
+		"clearMocks": true,
+		"reporters": [
+			"default",
+			[
+				"./node_modules/jest-html-reporter",
+				{
+					"pageTitle": "Firebase Cloud Messaging Test Report"
+				}
+			]
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/arunv11u/common.firebase-cloud-messaging.git"
+	},
+	"keywords": [
+		"firebase-cloud-messaging-wrapper"
+	],
+	"author": "Arun Varadharajalu",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/arunv11u/common.firebase-cloud-messaging/issues"
+	},
+	"homepage": "https://github.com/arunv11u/common.firebase-cloud-messaging#readme",
+	"devDependencies": {
+		"@types/jest": "^29.5.12",
+		"jest-html-reporter": "^3.10.2",
+		"rimraf": "^5.0.7",
+		"ts-jest": "^29.1.4"
+	},
+	"dependencies": {
+		"@arunvaradharajalu/common.errors": "^1.0.0",
+		"@faker-js/faker": "^7.6.0",
+		"firebase-admin": "^12.1.1"
+	}
+}
